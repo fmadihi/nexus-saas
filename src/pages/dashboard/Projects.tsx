@@ -163,6 +163,8 @@ export default function Projects() {
   const { data, isLoading } = useQuery({
     queryKey: ["projects", page, q, org?.id],
     queryFn: () => fetchPaged<Project>("projects", page, 6, q),
+     enabled: !!org?.id,
+  staleTime: 30_000, // 30 ثانیه cache نگه داره
   });
   const remove = useMutation({
     mutationFn: (id: string) => deleteItem("projects", id),

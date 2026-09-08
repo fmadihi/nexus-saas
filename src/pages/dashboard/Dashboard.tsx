@@ -141,8 +141,16 @@
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import {
-  LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell, Legend,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+  Legend,
 } from "recharts";
 import { api } from "../../lib/api";
 import type { Task, Project, Activity } from "../../types";
@@ -156,27 +164,44 @@ export default function Dashboard() {
   const { org } = useAuth();
   const { t } = useTranslation();
 
-  const tasks    = useQuery({ queryKey: ["tasks",    org?.id], queryFn: () => api<Task[]>(`/tasks?orgId=${org?.id}`) });
-  const projects = useQuery({ queryKey: ["projects", org?.id], queryFn: () => api<Project[]>(`/projects?orgId=${org?.id}`) });
-  const activity = useQuery({ queryKey: ["activity", org?.id], queryFn: () => api<Activity[]>(`/activity?orgId=${org?.id}&_sort=-at`) });
+  const tasks = useQuery({
+    queryKey: ["tasks", org?.id],
+    queryFn: () => api<Task[]>(`/tasks?orgId=${org?.id}`),
+    enabled: !!org?.id,
+  });
+  const projects = useQuery({
+    queryKey: ["projects", org?.id],
+    queryFn: () => api<Project[]>(`/projects?orgId=${org?.id}`),
+    enabled: !!org?.id,
+  });
+  const activity = useQuery({
+    queryKey: ["activity", org?.id],
+    queryFn: () => api<Activity[]>(`/activity?orgId=${org?.id}&_sort=-at`),
+    enabled: !!org?.id,
+  });
 
   if (tasks.isLoading || projects.isLoading)
     return (
       <div className="grid gap-4 md:grid-cols-4">
-        {[...Array(4)].map((_, i) => <Skeleton key={i} className="h-28" />)}
+        {[...Array(4)].map((_, i) => (
+          <Skeleton key={i} className="h-28" />
+        ))}
       </div>
     );
 
   const t_ = tasks.data ?? [];
-  const done   = t_.filter((x) => x.status === "done").length;
+  const done = t_.filter((x) => x.status === "done").length;
   const active = t_.length - done;
   const budget = (projects.data ?? []).reduce((s, p) => s + p.budget, 0);
 
   const kpis = [
-    { label: t("dashboard.activeTasks"),  value: active },
-    { label: t("dashboard.progressRate"), value: `${t_.length ? Math.round((done / t_.length) * 100) : 0}%` },
-    { label: t("dashboard.totalBudget"),  value: `€${budget.toLocaleString()}` },
-    { label: t("dashboard.projects"),     value: projects.data?.length ?? 0 },
+    { label: t("dashboard.activeTasks"), value: active },
+    {
+      label: t("dashboard.progressRate"),
+      value: `${t_.length ? Math.round((done / t_.length) * 100) : 0}%`,
+    },
+    { label: t("dashboard.totalBudget"), value: `€${budget.toLocaleString()}` },
+    { label: t("dashboard.projects"), value: projects.data?.length ?? 0 },
   ];
 
   const lineData = [
@@ -201,20 +226,38 @@ export default function Dashboard() {
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {kpis.map((k) => (
-          <Card key={k.label} className="group transition-shadow hover:shadow-[var(--shadow-md)]">
-            <p className="text-xs font-medium uppercase tracking-wide text-[var(--tx-muted)]">{k.label}</p>
-            <p className="mt-2 text-3xl font-bold text-[var(--tx-base)]">{k.value}</p>
+          <Card
+            key={k.label}
+            className="group transition-shadow hover:shadow-[var(--shadow-md)]"
+          >
+            <p className="text-xs font-medium uppercase tracking-wide text-[var(--tx-muted)]">
+              {k.label}
+            </p>
+            <p className="mt-2 text-3xl font-bold text-[var(--tx-base)]">
+              {k.value}
+            </p>
           </Card>
         ))}
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
         <Card>
-          <h2 className="mb-4 text-sm font-semibold text-[var(--tx-base)]">{t("dashboard.completedTasks")}</h2>
+          <h2 className="mb-4 text-sm font-semibold text-[var(--tx-base)]">
+            {t("dashboard.completedTasks")}
+          </h2>
           <ResponsiveContainer width="100%" height={240}>
             <LineChart data={lineData}>
-              <XAxis dataKey="month" tick={{ fontSize: 12, fill: "var(--tx-muted)" }} axisLine={false} tickLine={false} />
-              <YAxis tick={{ fontSize: 12, fill: "var(--tx-muted)" }} axisLine={false} tickLine={false} />
+              <XAxis
+                dataKey="month"
+                tick={{ fontSize: 12, fill: "var(--tx-muted)" }}
+                axisLine={false}
+                tickLine={false}
+              />
+              <YAxis
+                tick={{ fontSize: 12, fill: "var(--tx-muted)" }}
+                axisLine={false}
+                tickLine={false}
+              />
               <Tooltip
                 contentStyle={{
                   background: "var(--bg-raised)",
@@ -223,16 +266,30 @@ export default function Dashboard() {
                   fontSize: 12,
                 }}
               />
-              <Line type="monotone" dataKey="tasks" stroke="var(--a-500)" strokeWidth={2.5} dot={false} />
+              <Line
+                type="monotone"
+                dataKey="tasks"
+                stroke="var(--a-500)"
+                strokeWidth={2.5}
+                dot={false}
+              />
             </LineChart>
           </ResponsiveContainer>
         </Card>
 
         <Card>
-          <h2 className="mb-4 text-sm font-semibold text-[var(--tx-base)]">{t("dashboard.taskDistribution")}</h2>
+          <h2 className="mb-4 text-sm font-semibold text-[var(--tx-base)]">
+            {t("dashboard.taskDistribution")}
+          </h2>
           <ResponsiveContainer width="100%" height={240}>
             <PieChart>
-              <Pie data={pieData} dataKey="value" nameKey="name" innerRadius={55} outerRadius={90}>
+              <Pie
+                data={pieData}
+                dataKey="value"
+                nameKey="name"
+                innerRadius={55}
+                outerRadius={90}
+              >
                 {pieData.map((_, i) => (
                   <Cell key={i} fill={COLORS[i % COLORS.length]} />
                 ))}
@@ -252,7 +309,9 @@ export default function Dashboard() {
       </div>
 
       <Card>
-        <h2 className="mb-4 text-sm font-semibold text-[var(--tx-base)]">{t("dashboard.recentActivity")}</h2>
+        <h2 className="mb-4 text-sm font-semibold text-[var(--tx-base)]">
+          {t("dashboard.recentActivity")}
+        </h2>
         <ul className="divide-y divide-[var(--border)]">
           {(activity.data ?? []).map((a) => (
             <li key={a.id} className="flex items-center justify-between py-3">

@@ -37,7 +37,17 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AuthProvider } from "./context/AuthContext";
 import App from "./App";
 
-const queryClient = new QueryClient();
+// const queryClient = new QueryClient();
+// توی QueryClient default تنظیم کن (main.tsx یا App.tsx)
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 50_000, // 1 دقیقه
+      gcTime: 5 * 60_000, // 5 دقیقه در memory نگه داره
+      retry: 1,
+    },
+  },
+});
 
 async function prepare() {
   if (import.meta.env.DEV) {
