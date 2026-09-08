@@ -1,0 +1,102 @@
+{
+  "common": {
+    "logout": "خروج از حساب",
+    "save": "ذخیره",
+    "delete": "حذف",
+    "cancel": "لغو",
+    "search": "جست‌وجو…",
+    "prev": "قبلی",
+    "next": "بعدی",
+    "page": "صفحه",
+    "loading": "در حال بارگذاری…",
+    "noAccess": "بدون دسترسی",
+    "exportCsv": "خروجی CSV",
+    "addNew": "+ جدید",
+    "theme": "تم"
+  },
+  "nav": {
+    "dashboard": "داشبورد",
+    "projects": "پروژه‌ها",
+    "tasks": "تسک‌ها",
+    "members": "اعضا",
+    "billing": "فاکتورها",
+    "settings": "تنظیمات"
+  },
+  "auth": {
+    "login": "ورود به حساب",
+    "register": "ساخت حساب جدید",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "name": "نام شما",
+    "orgName": "نام سازمان (Workspace)",
+    "loginBtn": "ورود",
+    "registerBtn": "ایجاد سازمان",
+    "haveAccount": "حساب دارید؟",
+    "noAccount": "حساب ندارید؟",
+    "loginLink": "ورود",
+    "registerLink": "ثبت‌نام",
+    "wrongCredentials": "ایمیل یا رمز عبور نادرست است",
+    "orgRequired": "نام سازمان الزامی است",
+    "nameRequired": "نام الزامی است",
+    "emailRequired": "ایمیل الزامی است",
+    "passwordRequired": "رمز عبور الزامی است",
+    "passwordMin": "حداقل ۶ کاراکتر"
+  },
+  "dashboard": {
+    "title": "داشبورد",
+    "activeTasks": "تسک‌های فعال",
+    "progressRate": "نرخ پیشرفت",
+    "totalBudget": "بودجه کل",
+    "projects": "پروژه‌ها",
+    "completedTasks": "تسک‌های تکمیل‌شده (۶ ماه)",
+    "taskDistribution": "توزیع وضعیت تسک‌ها",
+    "recentActivity": "فعالیت‌های اخیر"
+  },
+  "projects": {
+    "title": "پروژه‌ها",
+    "newProject": "+ پروژه جدید",
+    "notFound": "پروژه‌ای یافت نشد",
+    "notFoundDesc": "اولین پروژه خود را بسازید یا عبارت جست‌وجو را تغییر دهید.",
+    "budget": "بودجه",
+    "modal": {
+      "title": "پروژه جدید",
+      "namePlaceholder": "نام پروژه",
+      "submit": "ثبت"
+    }
+  },
+  "tasks": {
+    "title": "برد تسک‌ها",
+    "todo": "To Do",
+    "inprogress": "در جریان",
+    "review": "در بررسی",
+    "done": "انجام‌شده"
+  },
+  "members": {
+    "title": "اعضای تیم",
+    "name": "نام",
+    "email": "ایمیل",
+    "role": "نقش",
+    "joinedAt": "تاریخ عضویت",
+    "actions": "عملیات"
+  },
+  "billing": {
+    "title": "پلن فعلی",
+    "pastInvoices": "فاکتورهای گذشته",
+    "number": "شماره",
+    "amount": "مبلغ",
+    "status": "وضعیت",
+    "date": "تاریخ"
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "darkMode": "حالت تاریک",
+    "profile": "پروفایل",
+    "nameLabel": "نام",
+    "language": "زبان"
+  },
+  "forbidden": {
+    "title": "403 — دسترسی مجاز نیست",
+    "desc": "شما اجازه دیدن این بخش را ندارید؛ با مدیر سازمان تماس بگیرید.",
+    "back": "بازگشت به داشبورد"
+  }
+}

@@ -1,0 +1,115 @@
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Design Tokens ─── */
+:root {
+  /* Neutral ramp (OKLCH-inspired, warm-neutral) */
+  --n-50:  #f8f8f7;
+  --n-100: #f1f0ee;
+  --n-200: #e5e3df;
+  --n-300: #d1cec9;
+  --n-400: #b0aca5;
+  --n-500: #8c8780;
+  --n-600: #6b665f;
+  --n-700: #504c46;
+  --n-800: #363330;
+  --n-900: #201e1c;
+  --n-950: #131210;
+
+  /* Accent — teal-blue (single hue, multiple lightness steps) */
+  --a-100: #dff3f2;
+  --a-200: #b3e4e2;
+  --a-300: #76cec9;
+  --a-400: #3db5ae;
+  --a-500: #1d9e97;   /* primary */
+  --a-600: #147f79;
+  --a-700: #0e615c;
+
+  /* Semantic */
+  --success: #22864a;
+  --warning: #b45309;
+  --danger:  #c13535;
+  --info:    #1d6fb8;
+
+  /* Surfaces */
+  --bg:         var(--n-50);
+  --bg-raised:  #ffffff;
+  --bg-subtle:  var(--n-100);
+  --border:     var(--n-200);
+  --border-strong: var(--n-300);
+
+  /* Text */
+  --tx-base:   var(--n-900);
+  --tx-muted:  var(--n-500);
+  --tx-faint:  var(--n-400);
+  --tx-invert: #ffffff;
+
+  /* Accent text */
+  --tx-accent: var(--a-600);
+
+  /* Radius */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / .06);
+  --shadow-md: 0 2px 8px 0 rgb(0 0 0 / .09);
+  --shadow-lg: 0 8px 24px 0 rgb(0 0 0 / .12);
+
+  /* Transition */
+  --dur: 150ms;
+  --ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+.dark {
+  --bg:         var(--n-950);
+  --bg-raised:  var(--n-900);
+  --bg-subtle:  var(--n-800);
+  --border:     var(--n-800);
+  --border-strong: var(--n-700);
+  --tx-base:    var(--n-100);
+  --tx-muted:   var(--n-400);
+  --tx-faint:   var(--n-600);
+  --tx-accent:  var(--a-300);
+}
+
+/* ─── Base ─── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 16px; }
+
+body {
+  background-color: var(--bg);
+  color: var(--tx-base);
+  font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* RTL for Persian */
+:lang(fa), [dir="rtl"] {
+  direction: rtl;
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+}
+
+/* ─── Focus ring ─── */
+:focus-visible {
+  outline: 2px solid var(--a-500);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-subtle); }
+::-webkit-scrollbar-thumb { background: var(--n-300); border-radius: 99px; }
+.dark ::-webkit-scrollbar-thumb { background: var(--n-700); }
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

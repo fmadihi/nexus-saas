@@ -1,0 +1,102 @@
+{
+  "common": {
+    "logout": "Abmelden",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "cancel": "Abbrechen",
+    "search": "Suchen…",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "page": "Seite",
+    "loading": "Laden…",
+    "noAccess": "Kein Zugriff",
+    "exportCsv": "CSV exportieren",
+    "addNew": "+ Neu",
+    "theme": "Design"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "projects": "Projekte",
+    "tasks": "Aufgaben",
+    "members": "Mitglieder",
+    "billing": "Rechnungen",
+    "settings": "Einstellungen"
+  },
+  "auth": {
+    "login": "Anmelden",
+    "register": "Neues Konto erstellen",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "name": "Ihr Name",
+    "orgName": "Organisationsname (Workspace)",
+    "loginBtn": "Anmelden",
+    "registerBtn": "Organisation erstellen",
+    "haveAccount": "Bereits ein Konto?",
+    "noAccount": "Noch kein Konto?",
+    "loginLink": "Anmelden",
+    "registerLink": "Registrieren",
+    "wrongCredentials": "Ungültige E-Mail oder Passwort",
+    "orgRequired": "Organisationsname ist erforderlich",
+    "nameRequired": "Name ist erforderlich",
+    "emailRequired": "E-Mail ist erforderlich",
+    "passwordRequired": "Passwort ist erforderlich",
+    "passwordMin": "Mindestens 6 Zeichen"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "activeTasks": "Aktive Aufgaben",
+    "progressRate": "Fortschrittsrate",
+    "totalBudget": "Gesamtbudget",
+    "projects": "Projekte",
+    "completedTasks": "Erledigte Aufgaben (6 Monate)",
+    "taskDistribution": "Aufgabenstatusverteilung",
+    "recentActivity": "Letzte Aktivitäten"
+  },
+  "projects": {
+    "title": "Projekte",
+    "newProject": "+ Neues Projekt",
+    "notFound": "Keine Projekte gefunden",
+    "notFoundDesc": "Erstellen Sie Ihr erstes Projekt oder ändern Sie den Suchbegriff.",
+    "budget": "Budget",
+    "modal": {
+      "title": "Neues Projekt",
+      "namePlaceholder": "Projektname",
+      "submit": "Erstellen"
+    }
+  },
+  "tasks": {
+    "title": "Aufgaben-Board",
+    "todo": "Offen",
+    "inprogress": "In Bearbeitung",
+    "review": "In Prüfung",
+    "done": "Erledigt"
+  },
+  "members": {
+    "title": "Teammitglieder",
+    "name": "Name",
+    "email": "E-Mail",
+    "role": "Rolle",
+    "joinedAt": "Beigetreten",
+    "actions": "Aktionen"
+  },
+  "billing": {
+    "title": "Aktueller Plan",
+    "pastInvoices": "Vergangene Rechnungen",
+    "number": "Nummer",
+    "amount": "Betrag",
+    "status": "Status",
+    "date": "Datum"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "darkMode": "Dunkelmodus",
+    "profile": "Profil",
+    "nameLabel": "Name",
+    "language": "Sprache"
+  },
+  "forbidden": {
+    "title": "403 — Zugriff verweigert",
+    "desc": "Sie haben keine Berechtigung, diesen Bereich anzuzeigen. Wenden Sie sich an Ihren Administrator.",
+    "back": "Zurück zum Dashboard"
+  }
+}

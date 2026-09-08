@@ -1,0 +1,102 @@
+{
+  "common": {
+    "logout": "Sign Out",
+    "save": "Save",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "search": "Search…",
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "loading": "Loading…",
+    "noAccess": "No access",
+    "exportCsv": "Export CSV",
+    "addNew": "+ New",
+    "theme": "Theme"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "tasks": "Tasks",
+    "members": "Members",
+    "billing": "Billing",
+    "settings": "Settings"
+  },
+  "auth": {
+    "login": "Sign in to your account",
+    "register": "Create a new account",
+    "email": "Email",
+    "password": "Password",
+    "name": "Your name",
+    "orgName": "Organisation name (Workspace)",
+    "loginBtn": "Sign in",
+    "registerBtn": "Create organisation",
+    "haveAccount": "Already have an account?",
+    "noAccount": "Don't have an account?",
+    "loginLink": "Sign in",
+    "registerLink": "Sign up",
+    "wrongCredentials": "Invalid email or password",
+    "orgRequired": "Organisation name is required",
+    "nameRequired": "Name is required",
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required",
+    "passwordMin": "At least 6 characters"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "activeTasks": "Active Tasks",
+    "progressRate": "Progress Rate",
+    "totalBudget": "Total Budget",
+    "projects": "Projects",
+    "completedTasks": "Completed Tasks (6 months)",
+    "taskDistribution": "Task Status Distribution",
+    "recentActivity": "Recent Activity"
+  },
+  "projects": {
+    "title": "Projects",
+    "newProject": "+ New Project",
+    "notFound": "No projects found",
+    "notFoundDesc": "Create your first project or change the search term.",
+    "budget": "Budget",
+    "modal": {
+      "title": "New Project",
+      "namePlaceholder": "Project name",
+      "submit": "Create"
+    }
+  },
+  "tasks": {
+    "title": "Task Board",
+    "todo": "To Do",
+    "inprogress": "In Progress",
+    "review": "Under Review",
+    "done": "Done"
+  },
+  "members": {
+    "title": "Team Members",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "joinedAt": "Joined",
+    "actions": "Actions"
+  },
+  "billing": {
+    "title": "Current Plan",
+    "pastInvoices": "Past Invoices",
+    "number": "Number",
+    "amount": "Amount",
+    "status": "Status",
+    "date": "Date"
+  },
+  "settings": {
+    "title": "Settings",
+    "darkMode": "Dark Mode",
+    "profile": "Profile",
+    "nameLabel": "Name",
+    "language": "Language"
+  },
+  "forbidden": {
+    "title": "403 — Access Denied",
+    "desc": "You don't have permission to view this section. Contact your organisation admin.",
+    "back": "Back to Dashboard"
+  }
+}
