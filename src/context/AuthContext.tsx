@@ -28,6 +28,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return raw ? JSON.parse(raw) : null;
   });
 
+
+  
   const persist = (u: User | null, o: Org | null) => {
     setUser(u);
     setOrg(o);
