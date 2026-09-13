@@ -32,6 +32,7 @@ export default function App() {
             <ProtectedRoute>
               <Layout />
             </ProtectedRoute>
+            
           }
         >
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
