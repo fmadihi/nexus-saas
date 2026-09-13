@@ -1,75 +1,92 @@
-# React + TypeScript + Vite
+# ⚡ Nexus SaaS - Enterprise Multi-Tenant Management Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ [![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=flat-square&logo=react&logoColor=black&logo=vercel&logoColor=white)](https://nexus-saas-rose.vercel.app/login/)
+[![React](https://img.shields.io/badge/React-19.2-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.3-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![TanStack Query](https://img.shields.io/badge/TanStack_Query-v5-FF4154?style=flat-square&logo=react-query&logoColor=white)](https://tanstack.com/query/latest)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
-Currently, two official plugins are available:
+ <a href="https://nexus-saas-rose.vercel.app/login/"><strong>Explore the Live Demo »</strong></a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A modern, responsive, and type-safe **SaaS Management & Analytics Dashboard** built with **React 19, TypeScript, TanStack Query, and Tailwind CSS v4**. Nexus SaaS offers a complete solution for project tracking, team collaboration, task workflows, and billing analytics with multi-tenant and role-based access patterns.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔑 Demo Credentials (Test Accounts)
+For instant preview and role testing, you can log in using any of the pre-configured accounts below:
 
-## Expanding the ESLint configuration
+| Role | Email | Password | Access / Scope |
+| :--- | :--- | :--- | :--- |
+| **Admin** | `admin@nexus.io` | `123456` | Full system access, invoices, project management & user control |
+| **Manager** | `manager@nexus.io` | `123456` | Project planning, task assignment & analytics |
+| **Member (User)** | `user@nexus.io` | `123456` | Task execution, progress updates & personal overview |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Key Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- 🏢 **Multi-Tenant & Role-Based Control (RBAC):** Distinct permissions tailored for Admins, Managers, and Regular Members.
+- 📊 **Interactive Analytics & Reporting:** Real-time data visualization using Recharts for budget burn-downs, activity trends, and invoices.
+- 📋 **Kanban & Task Management:** Task workflow tracking (`To Do`, `In Progress`, `Review`, `Done`) with tag categorizations.
+- 🌍 **Internationalization (i18n):** Multi-language ready architecture configured with `i18next`.
+- ⚡ **Optimistic Updates & Caching:** Powered by TanStack Query (React Query v5) for smooth state management and zero unnecessary refetches.
+- 🎨 **Modern Design System:** Built with Tailwind CSS v4, Lucide icons, and component reusability best practices.
+- 🧪 **Mock API / Offline-ready:** Powered by MSW (Mock Service Worker) & JSON Server for full standalone development and preview.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠️ Tech Stack & Architecture
+
+- **Core:** React 19, TypeScript, React Router 7
+- **Styling:** Tailwind CSS v4, `clsx`, `tailwind-merge`
+- **Data Fetching & State:** TanStack Query (React Query v5)
+- **Forms & Validation:** React Hook Form
+- **Data Visualization:** Recharts
+- **Localization:** i18next, react-i18next
+- **Icons:** Lucide React
+- **Mocking & Development Server:** MSW, JSON Server, Vite
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to set up and run the project locally.
+
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm, yarn, or pnpm
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/fmadihi/nexus-saas.git
+cd nexus-saas
+npm install
+```
+## 📁 Project Structure
 
 ```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+nexus-saas/
+├── public/              # Static assets & MSW service worker
+├── src/
+│   ├── assets/          # Global images and icons
+│   ├── components/      # Modular and reusable UI components
+│   ├── hooks/           # Custom React hooks (Data fetching & UI)
+│   ├── pages/           # Application views (Dashboard, Tasks, Projects, etc.)
+│   ├── routes/          # Application routing & Protected Route handlers
+│   ├── services/        # API client and endpoints
+│   ├── types/           # TypeScript interfaces and types
+│   └── App.tsx          # Main root component & providers
+├── db.json              # Mock database configuration
+└── package.json
 ```
+
+---
+
+## 👩‍💻 Author
+
+**Fatemeh Madihi** — Frontend Developer
+
+- **GitHub:** [@fmadihi](https://github.com/fmadihi)
+- **LinkedIn:** [Fatemeh Madihi](https://www.linkedin.com/in/fatemeh-madihi/)
+
