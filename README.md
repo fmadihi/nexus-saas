@@ -1,16 +1,22 @@
 # ⚡ Nexus SaaS - Enterprise Multi-Tenant Management Platform
 
- [![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=flat-square&logo=react&logoColor=black&logo=vercel&logoColor=white)](https://nexus-saas-rose.vercel.app/login/)
+ [![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=flat-square&logo=react&logoColor=black&logo=vercel&logoColor=white)](https://nexus-saas-lilac.vercel.app/login/)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.3-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![TanStack Query](https://img.shields.io/badge/TanStack_Query-v5-FF4154?style=flat-square&logo=react-query&logoColor=white)](https://tanstack.com/query/latest)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
- <a href="https://nexus-saas-rose.vercel.app/login/"><strong>Explore the Live Demo »</strong></a>
+ <a href="https://nexus-saas-lilac.vercel.app/login/"><strong>Explore the Live Demo »</strong></a>
 
 A modern, responsive, and type-safe **SaaS Management & Analytics Dashboard** built with **React 19, TypeScript, TanStack Query, and Tailwind CSS v4**. Nexus SaaS offers a complete solution for project tracking, team collaboration, task workflows, and billing analytics with multi-tenant and role-based access patterns.
 
+<p align="center">
+  <img src="./Pic01.PNG" alt="Nexus SaaS" width="100%" />
+</p>
+<p align="center">
+  <img src="./Pic02.PNG" alt="Nexus SaaS" width="100%" />
+</p>
 ---
 
 ### 🔑 Demo Credentials (Test Accounts)
