@@ -2,7 +2,7 @@
 
 {
   "users": [
-    { "id": "u1", "email": "admin@nexus.io", "password": "123456", "name": "Sara Ahmadi", "role": "admin", "orgId": "o1", "active": true, "joinedAt": "2026-01-10" },
+    { "id": "u1", "email": "admin@nexus.io", "password": "123456", "name": "Fatemeh Madihi", "role": "admin", "orgId": "o1", "active": true, "joinedAt": "2026-01-10" },
     { "id": "u2", "email": "manager@nexus.io", "password": "123456", "name": "Ali Rezaei", "role": "manager", "orgId": "o1", "active": true, "joinedAt": "2026-02-01" },
     { "id": "u3", "email": "user@nexus.io", "password": "123456", "name": "Nima Karimi", "role": "user", "orgId": "o1", "active": true, "joinedAt": "2026-03-15" }
   ],
