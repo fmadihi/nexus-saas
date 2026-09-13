@@ -27,8 +27,7 @@ export default function Forbidden() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-[var(--bg)] p-4 text-center">
       <div className="rounded-full bg-red-100 dark:bg-red-900/30 p-5">
-        <ShieldAlert classNk
-        to="/dashboard text-[var(--danger)]" />
+        <ShieldAlert to="/dashboard text-[var(--danger)]" />
       </div>
       <h1 className="text-2xl font-bold text-[var(--tx-base)]">{t("forbidden.title")}</h1>
       <p className="max-w-xs text-sm text-[var(--tx-muted)]">{t("forbidden.desc")}</p>

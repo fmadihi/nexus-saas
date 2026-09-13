@@ -72,7 +72,7 @@
 // }
 import { useQuery } from "@tanstack/react-query";
 import { api } from "../../lib/api";
-import type { Invoice, Org } from "../../types";
+import type { Invoice } from "../../types";
 import Card from "../../components/ui/Card";
 import Badge from "../../components/ui/Badge";
 import Button from "../../components/ui/Button";
@@ -101,7 +101,7 @@ export default function Billing() {
       <Card className="flex items-center justify-between">
         <div>
           <h1 className="text-xl font-bold text-[var(--tx-base)]">{t("billing.title")}</h1>
-          <Badge color="green" className="mt-1">{org?.plan}</Badge>
+          <Badge color="green">{org?.plan}</Badge>
         </div>
         <Button onClick={exportCsv}>{t("common.exportCsv")}</Button>
       </Card>
